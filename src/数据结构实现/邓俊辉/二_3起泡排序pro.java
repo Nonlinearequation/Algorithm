@@ -19,7 +19,7 @@ public class 二_3起泡排序pro {
 
         }
     }
-    /*
+    /**
      * 返回hi的位置 如果某段元素之后都不需要交换，那么将hi修改为需要交换的最短位置
      */
     private  static int bubble(int[] arr,int lo,int hi){

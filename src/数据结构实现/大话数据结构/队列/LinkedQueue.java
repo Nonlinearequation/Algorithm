@@ -78,7 +78,7 @@ public class LinkedQueue<E> implements QueueI<E> {
     }
 
     public boolean empty() {
-        return first == null;
+        return size == 0;
     }
 
 }
