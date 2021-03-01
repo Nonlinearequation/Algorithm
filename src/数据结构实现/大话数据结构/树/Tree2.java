@@ -4,7 +4,7 @@ package 数据结构实现.大话数据结构.树;
 import java.util.Arrays;
 
 /**
- * 双亲孩子表示法
+ * 双亲孩子表示法：数组存储节点，链表存储孩子双亲节点关系
  * 树存储BoxNode
  * BoxNode存储数据和关系
  *
