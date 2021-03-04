@@ -1,7 +1,5 @@
 package 数据结构实现.大话数据结构.树;
 
-import com.sun.xml.internal.messaging.saaj.soap.impl.HeaderImpl;
-
 /**
  *
  * @author xi553
@@ -128,6 +126,27 @@ public class TreeLinkedList {
         }
     }
 
+    /**
+     * 后序遍历
+     * @param tree
+     */
+    public void postorderIterator(TreeLinkedList tree){
+        if(tree == null){
+            return;
+        }
+        for(TreeLinkedList u = tree.getFirstChild();u!=null;u = u.getNextSibling()){
+            postorderIterator(u);
+        }
+        System.out.print(tree.getData());
+    }
+
+    /**
+     * 层次遍历
+     * @param tree
+     */
+    public void levelOrderTraversal(TreeLinkedList tree){
+
+    }
 
 
 }

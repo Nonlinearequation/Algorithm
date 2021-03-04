@@ -67,8 +67,11 @@ public class Test {
         c = new TreeLinkedList("c",a,g,null);
         b = new TreeLinkedList("b",a,d,c);
         a = new TreeLinkedList("a",null,b,null);
+        System.out.print("前序遍历：");
         a.preOrderTraversal(a);
-
+        System.out.print("\n后序遍历：");
+        a.postorderIterator(a);
+        System.out.println();
     }
 
 }
