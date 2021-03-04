@@ -54,6 +54,20 @@ public class Test {
          */
         System.out.println(tree2.parent(new BoxNode("c")).getData());
 
+        System.out.println("一般树的遍历:");
+        TreeLinkedList a=null,b=null,c=null,d=null,e=null,f=null,g=null,h=null,i=null,j=null,k=null;
+        k = new TreeLinkedList("k",f,null,null);
+        j = new TreeLinkedList("j",f,null,k);
+        i = new TreeLinkedList("i",e,null,null);
+        h = new TreeLinkedList("h",d,null,null);
+        g = new TreeLinkedList("g",c,null,null);
+        f = new TreeLinkedList("f",b,j,null);
+        e = new TreeLinkedList("e",b,i,f);
+        d = new TreeLinkedList("d",b,h,e);
+        c = new TreeLinkedList("c",a,g,null);
+        b = new TreeLinkedList("b",a,d,c);
+        a = new TreeLinkedList("a",null,b,null);
+        a.preOrderTraversal(a);
 
     }
 

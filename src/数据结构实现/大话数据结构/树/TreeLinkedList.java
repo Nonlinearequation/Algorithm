@@ -51,6 +51,18 @@ public class TreeLinkedList {
         return nextSibling;
     }
 
+    public void setParent(TreeLinkedList parent) {
+        this.parent = parent;
+    }
+
+    public void setFirstChild(TreeLinkedList firstChild) {
+        this.firstChild = firstChild;
+    }
+
+    public void setNextSibling(TreeLinkedList nextSibling) {
+        this.nextSibling = nextSibling;
+    }
+
     /***
      * 返回当前节点后代的数目，即以当前节点为根的子树规模
      * 一棵树的规模等于根节点下所有子树规模之和再加一   以下方法通过firstchild找到根节点的长子，累加子树规模，
@@ -103,15 +115,16 @@ public class TreeLinkedList {
     }
 
     /***
-     * 前序遍历
-     * 使用递归遍历
+     * 前序遍历（根-左-右）
+     * 使用递归遍历，对任何一棵树来说，先打印根节点，再打印左节点，再找左的子节点
      */
-    public void preOrderTraversal(){
+    public void preOrderTraversal(TreeLinkedList tree){
         if(data == null){
             return;
         }
-        for(;;){
-
+        System.out.print(tree.getData());
+        for(TreeLinkedList u = tree.getFirstChild();u!=null;u = u.getNextSibling()){
+            preOrderTraversal(u);
         }
     }
 
