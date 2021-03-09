@@ -1,5 +1,7 @@
 package 数据结构实现.大话数据结构.树;
 
+import 数据结构实现.大话数据结构.二叉树.ThreadedBinaryTree;
+
 import javax.swing.*;
 import java.util.ArrayList;
 
@@ -54,7 +56,6 @@ public class Test {
          */
         System.out.println(tree2.parent(new BoxNode("c")).getData());
 
-        System.out.println("一般树的遍历:");
         TreeLinkedList a=null,b=null,c=null,d=null,e=null,f=null,g=null,h=null,i=null,j=null,k=null;
         k = new TreeLinkedList("k",f,null,null);
         j = new TreeLinkedList("j",f,null,k);
@@ -67,11 +68,41 @@ public class Test {
         c = new TreeLinkedList("c",a,g,null);
         b = new TreeLinkedList("b",a,d,c);
         a = new TreeLinkedList("a",null,b,null);
-        System.out.print("前序遍历：");
+        System.out.print("\n一般树的遍历:\n前序遍历：");
         a.preOrderTraversal(a);
         System.out.print("\n后序遍历：");
         a.postorderIterator(a);
         System.out.println();
+
+
+        /*线索二叉树
+        *           a
+        *         /   \
+        *        b     c
+        *       / \   / \
+        *      d  e  f  g
+        *     / \ \
+        *    h  i  j
+        * */
+        ThreadedBinaryTree a1=null,b1=null,c1=null,d1=null,e1=null,f1=null,g1=null,h1=null,i1=null,j1=null;
+        h1 = new ThreadedBinaryTree("h",null,false,null,false);
+        i1 = new ThreadedBinaryTree("i",null,false,null,false);
+        j1 = new ThreadedBinaryTree("j",null,false,null,false);
+        f1 = new ThreadedBinaryTree("f",null,false,null,false);
+        g1 = new ThreadedBinaryTree("g",null,false,null,false);
+        d1 = new ThreadedBinaryTree("d",h1,false,i1,false);
+        e1 = new ThreadedBinaryTree("e",null,false,j1,false);
+        b1 = new ThreadedBinaryTree("b",d1,false,e1,false);
+        c1 = new ThreadedBinaryTree("c",f1,false,g1,false);
+        a1 = new ThreadedBinaryTree("a",b1,false,c1,false);
+        a1.inThreading(a1);
+        System.out.println("线索二叉树中序遍历（不递归）：");
+        a1.inOrderTraverse(a1);
+        System.out.println();
+
+
+
+
     }
 
 }
