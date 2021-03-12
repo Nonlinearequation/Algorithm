@@ -72,8 +72,6 @@ public class Test {
         a.preOrderTraversal(a);
         System.out.print("\n后序遍历：");
         a.postorderIterator(a);
-        System.out.println();
-
 
         /*线索二叉树
         *           a
@@ -96,9 +94,8 @@ public class Test {
         c1 = new ThreadedBinaryTree("c",f1,false,g1,false);
         a1 = new ThreadedBinaryTree("a",b1,false,c1,false);
         a1.inThreading(a1);
-        System.out.println("线索二叉树中序遍历（不递归）：");
+        System.out.print("\n线索二叉树中序遍历（不递归）：");
         a1.inOrderTraverse(a1);
-        System.out.println();
 
 
 
