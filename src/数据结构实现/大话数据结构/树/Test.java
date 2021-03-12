@@ -73,30 +73,6 @@ public class Test {
         System.out.print("\n后序遍历：");
         a.postorderIterator(a);
 
-        /*线索二叉树
-        *           a
-        *         /   \
-        *        b     c
-        *       / \   / \
-        *      d  e  f  g
-        *     / \ \
-        *    h  i  j
-        * */
-        ThreadedBinaryTree a1=null,b1=null,c1=null,d1=null,e1=null,f1=null,g1=null,h1=null,i1=null,j1=null;
-        h1 = new ThreadedBinaryTree("h",null,false,null,false);
-        i1 = new ThreadedBinaryTree("i",null,false,null,false);
-        j1 = new ThreadedBinaryTree("j",null,false,null,false);
-        f1 = new ThreadedBinaryTree("f",null,false,null,false);
-        g1 = new ThreadedBinaryTree("g",null,false,null,false);
-        d1 = new ThreadedBinaryTree("d",h1,false,i1,false);
-        e1 = new ThreadedBinaryTree("e",null,false,j1,false);
-        b1 = new ThreadedBinaryTree("b",d1,false,e1,false);
-        c1 = new ThreadedBinaryTree("c",f1,false,g1,false);
-        a1 = new ThreadedBinaryTree("a",b1,false,c1,false);
-        a1.inThreading(a1);
-        System.out.print("\n线索二叉树中序遍历（不递归）：");
-        a1.inOrderTraverse(a1);
-
 
 
 
