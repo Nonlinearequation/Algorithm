@@ -1,7 +1,7 @@
 package 数据结构实现.大话数据结构.树;
 
 /**
- *
+ * 邓俊辉树算法实现
  * @author xi553
  */
 public class TreeLinkedList {
