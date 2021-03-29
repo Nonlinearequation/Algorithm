@@ -14,7 +14,7 @@ public class BiTree {
      * 书 6.9最后的构建二叉树算法，我觉得有问题。
      * 网上有相关的实现。比根节点大的节点在左子树，比根节点小的在右子树。
      * --更新：书中没有提到节点数据大小与数据的关系，在网上查阅资料发现，一般都是二叉搜索树
-     * @param str
+     * @param data
      * @return
      */
     public BiNode preOrderCreate(int data){
