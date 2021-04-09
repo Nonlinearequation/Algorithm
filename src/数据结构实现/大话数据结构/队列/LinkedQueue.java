@@ -36,19 +36,28 @@ public class LinkedQueue<E> implements QueueI<E> {
         if (first == null) {
             throw new NullPointerException("队列为空");
         }
-        if (first.next == null) {
+        if (first.next == null) {//只有一个节点
             E e = first.e;
             first = null;
+            size--;
             return e;
         }
         Node<E> node = first;
         first = node.next;
         first.prev = null;
         node.next = null;
+//        if(size == 2){//不加也可以，只是剩了last没有清空
+//            last = null;
+//        }
         size--;
         return node.e;
     }
 
+    /**
+     * 分三种情况处理即可
+     * @param e
+     * @return
+     */
     @Override
     public boolean enQueue(E e) {
         if (empty()) {

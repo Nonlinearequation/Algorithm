@@ -72,7 +72,8 @@ public class Test {
         a.preOrderTraversal(a);
         System.out.print("\n后序遍历：");
         a.postorderIterator(a);
-
+        System.out.println("\n层次遍历：");
+        a.levelOrderTraversal(a);
 
 
 

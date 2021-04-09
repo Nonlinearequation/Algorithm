@@ -1,5 +1,7 @@
 package 数据结构实现.大话数据结构.树;
 
+import 数据结构实现.大话数据结构.队列.LinkedQueue;
+
 /**
  * 邓俊辉树算法实现
  * @author xi553
@@ -141,11 +143,21 @@ public class TreeLinkedList {
     }
 
     /**
-     * 层次遍历
+     * 层次遍历，用队列实现
      * @param tree
      */
     public void levelOrderTraversal(TreeLinkedList tree){
-
+        LinkedQueue<TreeLinkedList> queue = new LinkedQueue();
+        if(tree!=null) {
+            queue.enQueue(tree);//先将根节点放入
+        }
+        while(queue.size()>0){
+            TreeLinkedList temp = queue.getHead();
+            System.out.print(temp.getData());
+            for(TreeLinkedList child = temp.getFirstChild();child!=null;child=child.getNextSibling()){
+                queue.enQueue(child);
+            }
+        }
     }
 
 
