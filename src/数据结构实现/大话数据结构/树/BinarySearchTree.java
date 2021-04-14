@@ -7,7 +7,7 @@ import java.util.Objects;
  */
 public class BinarySearchTree<E extends Comparable<E>> {
 
-    private class Node {
+    public class Node {
         private E e;//节点元素值
         private Node left, right;
 
@@ -16,10 +16,42 @@ public class BinarySearchTree<E extends Comparable<E>> {
             this.left = null;
             this.right = null;
         }
+
+        public E getE() {
+            return e;
+        }
+
+        public void setE(E e) {
+            this.e = e;
+        }
+
+        public Node getLeft() {
+            return left;
+        }
+
+        public void setLeft(Node left) {
+            this.left = left;
+        }
+
+        public Node getRight() {
+            return right;
+        }
+
+        public void setRight(Node right) {
+            this.right = right;
+        }
     }
 
     private Node root;//根节点
     private int size;//树中元素的个数
+
+    public Node getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node root) {
+        this.root = root;
+    }
 
     public BinarySearchTree() {
         root = null;
@@ -194,7 +226,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
      * @param e
      * @return
      */
-    private Node insert(E e){
+    public Node insert(E e){
         if(root==null){
             root = new Node(e);
             return root;
@@ -220,7 +252,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
      * @param e
      * @return
      */
-    private Node insertRepeat(Node node,E e){
+    public Node insertRepeat(Node node,E e){
         if(root==null){
             root = new Node(e);
             return root;
