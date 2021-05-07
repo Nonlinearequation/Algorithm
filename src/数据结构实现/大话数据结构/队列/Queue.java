@@ -2,7 +2,7 @@ package 数据结构实现.大话数据结构.队列;
 
 /**
  * 循环队列
- *
+ * 基于数组实现
  * @param <E>
  */
 public class Queue<E> implements QueueI<E> {
@@ -20,6 +20,10 @@ public class Queue<E> implements QueueI<E> {
     //数组整体长度
     private int length;
 
+    /**
+     * 初始化数组队列
+     * @param capacity
+     */
     @Override
     public void initQueue(int capacity) {
         if (capacity <= 0) {
@@ -31,6 +35,9 @@ public class Queue<E> implements QueueI<E> {
         length = capacity;
     }
 
+    /**
+     * 销毁队列
+     */
     @Override
     public void destroyQueue() {
         clearQueue();

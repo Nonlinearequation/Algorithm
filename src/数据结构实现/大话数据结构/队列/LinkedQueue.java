@@ -1,5 +1,9 @@
 package 数据结构实现.大话数据结构.队列;
 
+/**
+ * 链表实现队列
+ * @param <E>
+ */
 public class LinkedQueue<E> implements QueueI<E> {
 
     private Node<E> first;//首节点
@@ -31,6 +35,10 @@ public class LinkedQueue<E> implements QueueI<E> {
         }
     }
 
+    /**
+     * 获取元素 分两种情况处理
+     * @return 元素
+     */
     @Override
     public E getHead() {
         if (first == null) {
@@ -54,20 +62,21 @@ public class LinkedQueue<E> implements QueueI<E> {
     }
 
     /**
+     * 入队
      * 分三种情况处理即可
      * @param e
      * @return
      */
     @Override
     public boolean enQueue(E e) {
-        if (empty()) {
+        if (empty()) {//队列为空，添加首元素
             Node<E> node = new Node<E>(null, e, null);
             first = node;
-        } else if (first.next == null) {
+        } else if (first.next == null) {//队列只有一个元素
             Node<E> node = new Node<E>(first, e, null);
             first.next = node;
             last = node;
-        } else {
+        } else {//队列有两个及以上元素
             Node<E> node = new Node<E>(last, e, null);
             last.next = node;
             last = node;
